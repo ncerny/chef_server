@@ -14,3 +14,11 @@ bin/*
 
 .kitchen/
 .kitchen.local.yml
+
+.chef/local-mode-cache/
+.chef/vms/
+.chef/trusted_certs/
+.chef/keys/
+clients/
+cookbooks/
+nodes/
