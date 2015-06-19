@@ -13,9 +13,11 @@ chef_server 'be01.vagrantup.com' do
   addons %w(opscode-reporting opscode-push-jobs-server)
 end
 
-machine_file '/var/opt/opscode/nginx/ca/be01.vagrantup.com.crt' do
+directory Chef::Config[:file_cache_path]
+
+machine_file '/etc/hosts' do
   machine 'be01.vagrantup.com'
-  local_path "#{Chef::Config[:trusted_certs_dir]}/be01.vagrantup.com.crt"
+  local_path "#{Chef::Config[:file_cache_path]}/private-chef-running.json"
   action :download
 end
 
@@ -24,8 +26,8 @@ chef_server 'fe01.vagrantup.com' do
   addons %w(opscode-reporting opscode-push-jobs-server opscode-manage)
 end
 
-machine_file '/var/opt/opscode/nginx/ca/be01.vagrantup.com.crt' do
+machine_file '/etc/hosts' do
   machine 'fe01.vagrantup.com'
-  local_path "#{Chef::Config[:trusted_certs_dir]}/be01.vagrantup.com.crt"
+  local_path "#{Chef::Config[:file_cache_path]}/private-chef-running.json"
   action :upload
 end

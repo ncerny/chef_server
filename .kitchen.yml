@@ -4,10 +4,11 @@ driver:
 
 provisioner:
   name: chef_zero
+  chef_omnibus_install_options: -P chefdk
+  chef_omnibus_root: /opt/chefdk
 
 platforms:
-  - name: ubuntu-12.04
-  - name: centos-6.5
+  - name: centos-6.6
 
 suites:
   - name: default
