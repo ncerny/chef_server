@@ -12,6 +12,7 @@ with_driver 'vagrant'
 
 with_machine_options(
   vagrant_options: {
-    'vm.box' => 'opscode-centos-6.6'
+    'vm.box' => 'opscode-centos-6.6',
+    'vm.network' => ":private_network, :ip => '33.33.33.10'"
   }
 )

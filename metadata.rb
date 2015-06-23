@@ -4,7 +4,7 @@ maintainer_email 'you@example.com'
 license 'all_rights'
 description 'Installs/Configures chef_server'
 long_description 'Installs/Configures chef_server'
-version '0.1.2'
+version '0.1.3'
 
 depends 'chef-server-ingredient'
 depends 'packagecloud'
