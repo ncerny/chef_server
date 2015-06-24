@@ -13,5 +13,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[chef_delivery::default]
+      - recipe[chef_server::default]
     attributes:
