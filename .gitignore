@@ -20,5 +20,6 @@ bin/*
 .chef/trusted_certs/
 .chef/keys/
 clients/
+berks-cookbooks
 cookbooks/
 nodes/
