@@ -9,6 +9,7 @@ include_recipe 'chef_server::_vagrant'
 # chef_server 'chef01.vagrantup.com'
 
 chef_server 'be01.vagrantup.com' do
+  topology 'tier'  
   roles 'backend'
   addons %w(opscode-reporting opscode-push-jobs-server)
   machine_options vagrant_options: {
