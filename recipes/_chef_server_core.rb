@@ -21,6 +21,9 @@ template '/etc/opscode/chef-server.rb' do
   source 'chef-server.rb.erb'
   owner 'root'
   group 'root'
+  variables(
+     :topology => node['chef_server']['topology']
+  )
   action :create
   notifies :reconfigure, 'chef_server_ingredient[chef-server-core]', :immediately
 end
