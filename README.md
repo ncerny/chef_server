@@ -1,4 +1,7 @@
-# chef_server
+# yacs - Yet Another Chef Server cookbook: we enjoy shaving
 
-TODO: Enter the cookbook description here.
+To execute:
+    berks vendor cookbooks; chef-client -z -o yacs::default
 
+To cleanup:
+    berks vendor cookbooks; chef-client -z -o yacs::destroy
