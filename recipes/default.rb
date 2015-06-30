@@ -6,7 +6,7 @@
 
 include_recipe 'yacs::_vagrant'
 
-# chef_server 'chef01.vagrantup.com'
+# yacs_chef_server 'chef01.vagrantup.com'
 
 yacs_chef_server 'be01.vagrantup.com' do
   roles 'backend'

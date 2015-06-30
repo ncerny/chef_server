@@ -4,16 +4,16 @@
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
-include_recipe 'chef_server::_vagrant'
+include_recipe 'yacs::_vagrant'
 
-# chef_server 'chef01.vagrantup.com' do
+# yacs_chef_server 'chef01.vagrantup.com' do
 #   action :destroy
 # end
 
-chef_server 'be01.vagrantup.com' do
+yacs_chef_server 'be01.vagrantup.com' do
   action :destroy
 end
 
-chef_server 'fe01.vagrantup.com' do
+yacs_chef_server 'fe01.vagrantup.com' do
   action :destroy
 end
