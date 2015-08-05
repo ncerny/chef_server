@@ -4,6 +4,4 @@
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
-chef_server_ingredient 'chef-server-core' do
-  reconfigure true
-end
+chef_ingredient 'chef-server'
